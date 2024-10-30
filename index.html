@@ -18,14 +18,6 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  // Initialize EmailJS with your user ID
-  (function() {
-    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
-  })();
-</script>
 </head>
 
 <body>
@@ -877,10 +869,10 @@ Workplace Skills Centre.</p>
                     <p class="global__desc footer__desc">Join our newsletter to stay updated about our latest news and
                         articles.
                     </p>
-                    <form id="subscribeForm" action="#" method="POST" class="d-flex position-relative">
-  <input id="emailInput" name="email" class="footer__inp form-control" type="text" placeholder="Enter your email" required>
-  <button type="button" onclick="subscribeUser()" class="global__btn footer__inp-btn">Subscribe</button>
-</form>
+                    <form action="#" method="POST" class="d-flex position-relative">
+                        <input class="footer__inp form-control" type="text" placeholder="Enter your email">
+                        <button class="global__btn footer__inp-btn">subscribe</button>
+                    </form>
                 </div>
             </div>
             <hr class="footer__border">
