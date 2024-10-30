@@ -454,14 +454,3 @@ $(document).ready(function () {
     spinner: "rotating-plane",
   });
 });
-
-<script>
-  function subscribeUser() {
-    // Get the email input value
-    const email = document.getElementById('emailInput').value;
-
-    // Validate email format
-    if (!validateEmail(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
