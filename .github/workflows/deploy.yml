@@ -1,0 +1,25 @@
+# File: .github/workflows/deploy.yml
+
+name: Deploy Static Website to Azure
+
+on:
+  push:
+    branches:
+      - main  # Triggers deployment on push to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from GitHub
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v2
+
+      # Deploy to Azure Web App
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: '<Your App Name>'                    # Replace with the name of your Azure Web App
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: '.'                                   # Deploy all files from the root directory
